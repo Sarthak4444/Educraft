@@ -8,7 +8,7 @@ const shapes = {
 const variants = {
   fill: {
     orange_200_01: "bg-[#eebc74] text [#FFFFFF]",
-    white_A700: "bg-[#FFFFff] text-[#@ae33c]",
+    white_A700: "bg-[#FFFFff] text-[#0ae33c]",
     red_50: "bg-[#ffeeed]",
     red_300_01: "bg-[#d07356] text-[#FFFFFF]",
   },
@@ -20,7 +20,7 @@ const sizes = {
   "2xl": "h-[60px] px-[22px]",
   lg: "h-[54px] px-[34px] text-[18px]",
   xl: "h-[58px] px-[38px] text-[16px]",
-  md: "h-[S58px] px-[34px] text-[16px]",
+  md: "h-[58px] px-[34px] text-[16px]",
   xs: "h-[42px] px-3.5 text-[16px]",
   sm: "h-[44px] px-2.5",
 };
@@ -45,7 +45,7 @@ const Button = ({
     >
       {!!leftIcon && leftIcon}
       {children}
-      {!!rightIcon & rightIcon}
+      {!!rightIcon && rightIcon}
     </button>
   );
 };

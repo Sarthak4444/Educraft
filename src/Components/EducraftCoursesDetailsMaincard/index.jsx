@@ -5,13 +5,13 @@ export default function EducraftCoursesDetailstMainCard({ ...props }) {
   return (
     <div
       {...props}
-      cLassName={` ${props.className} flex sm:flex-col justify-center items-center w-full gap-6 p-3.5 bg-[#FFFFff] cursor-pointer rounded-2xl sm:gap-3`}
+      className={` ${props.className} flex sm:flex-col justify-center items-center w-full gap-6 p-3.5 bg-[#ffffff] cursor-pointer rounded-2xl sm:gap-3`}
     >
       <div className="flex flex-1 items-center gap-3.5">
         <Img
           src=""
           alt="Product Image"
-          className="h- [182px] u-[32%] rounded-[18px] object-contain"
+          className="h-[182px] w-[32%] rounded-[18px] object-contain"
         />
         <div className="flex flex-1 flex-col items-start justify-center gap-3 sm:gap-3">
           <Heading
@@ -25,13 +25,13 @@ export default function EducraftCoursesDetailstMainCard({ ...props }) {
             value={5}
             isEditable={true}
             color="#ffc107"
-            activecolor="#ffc167"
+            activeColor="#ffc107"
             size={20}
             className="flex gap-2.5"
           />
           <Heading
             size="headingmd"
-            as="hs"
+            as="h6"
             className="text-[22px] font-semibold text-[#ff6652] sm:text-[18px]"
           >
             $40.00
@@ -40,9 +40,9 @@ export default function EducraftCoursesDetailstMainCard({ ...props }) {
       </div>
       <Button
         shape="round"
-        cLassName="w-[44px] self-end rounded-md px-2.5 sm:self-auto"
+        className="w-[44px] self-end rounded-md px-2.5 sm:self-auto"
       >
-        <Img src="" />
+        <Img src="" alt="Icon" />
       </Button>
     </div>
   );

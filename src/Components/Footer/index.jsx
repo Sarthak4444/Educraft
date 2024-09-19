@@ -23,7 +23,7 @@ export default function Footer() {
               />
             </div>
           </div>
-          <div classhame="flex flex-col items-start gap-3.5">
+          <div className="flex flex-col items-start gap-3.5">
             <Heading as="p" className="text-[16px] font-normal text-[#5d5a6f]">
               ©2021 Educraft
             </Heading>
@@ -52,7 +52,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="#" classhame="u-full leading-[30px]">
+              <a href="#" className="u-full leading-[30px]">
                 <Heading
                   as="p"
                   className="text-[16px] font-normal text-[#5d5a6f]"
@@ -138,7 +138,7 @@ export default function Footer() {
                   as="p"
                   className="text-[16px] font-normal text-[#5d5a6f]"
                 >
-                  transactions
+                  Transactions
                 </Heading>
               </a>
             </li>
@@ -172,12 +172,12 @@ export default function Footer() {
           >
             Quick links
           </Heading>
-          <ul classMame="flex flex-col items-start gap-6">
+          <ul className="flex flex-col items-start gap-6">
             <li>
               <a href="#">
                 <Heading
                   as="p"
-                  className="text-[16px] font-normal text-[#5dsasf]"
+                  className="text-[16px] font-normal text-[#5d5a6f]"
                 >
                   Home
                 </Heading>
@@ -187,7 +187,7 @@ export default function Footer() {
               <a href="#">
                 <Heading
                   as="p"
-                  className="text-[16px] font-normal text-[#5dsasf]"
+                  className="text-[16px] font-normal text-[#5d5a6f]"
                 >
                   Professional Education
                 </Heading>
@@ -197,7 +197,7 @@ export default function Footer() {
               <a href="#">
                 <Heading
                   as="p"
-                  className="text-[16px] font-normal text-[#5dsasf]"
+                  className="text-[16px] font-normal text-[#5d5a6f]"
                 >
                   Courses
                 </Heading>
@@ -207,7 +207,7 @@ export default function Footer() {
               <a href="#">
                 <Heading
                   as="p"
-                  className="text-[16px] font-normal text-[#5dsasf]"
+                  className="text-[16px] font-normal text-[#5d5a6f]"
                 >
                   Admissions
                 </Heading>
@@ -217,7 +217,7 @@ export default function Footer() {
               <a href="#">
                 <Heading
                   as="p"
-                  className="text-[16px] font-normal text-[#5dsasf]"
+                  className="text-[16px] font-normal text-[#5d5a6f]"
                 >
                   Testimonials
                 </Heading>
@@ -227,7 +227,7 @@ export default function Footer() {
               <a href="#">
                 <Heading
                   as="p"
-                  className="text-[16px] font-normal text-[#5dsasf]"
+                  className="text-[16px] font-normal text-[#5d5a6f]"
                 >
                   Programs
                 </Heading>

@@ -14,16 +14,15 @@ const RatingBar = ({
     <>
       <ReactStars
         edit={isEditable}
-        classNames={className}
+        className={className}
         count={starCount}
-        isHalf={false}
         color={color}
         activeColor={activeColor}
         {...restProps}
-        key={restProps.value || 1}
       />
-      {children}
+      {children && children}
     </>
   );
 };
+
 export { RatingBar };

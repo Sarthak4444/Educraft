@@ -11,11 +11,11 @@ export default function Header({ ...props }) {
   return (
     <header
       {...props}
-      className={` ${props.className} flex justify-center items-center py-[22px] sm:py-5 bg-[#f7f7f7]`}
+      className={`${props.className} flex justify-center items-center py-[22px] sm:py-5 bg-[#f7f7f7]`}
     >
       <div className="container-xs flex justify-center md:flex-col md:px-5">
         <Img
-          sre=""
+          src=""
           alt="Header Logo"
           className="h-[38px] w-[172px] object-contain"
         />
@@ -27,18 +27,14 @@ export default function Header({ ...props }) {
                 as="p"
                 className="text-[16px] font-medium text-[#0a033c]"
               >
-                shop
+                Shop
               </Heading>
             </a>
           </li>
 
           <li
-            onMouseLeave={() => {
-              setMenuOpen(false);
-            }}
-            onMouseEnter={() => {
-              setMenuOpen(true);
-            }}
+            onMouseLeave={() => setMenuOpen(false)}
+            onMouseEnter={() => setMenuOpen(true)}
           >
             <div className="flex cursor-pointer items-center">
               <Heading
@@ -47,17 +43,13 @@ export default function Header({ ...props }) {
               >
                 For Kindergarten
               </Heading>
-              <Img src="" alt="Dropdown Icon" classame="h-[24px] w-[24px]" />
+              <Img src="" alt="Dropdown Icon" className="h-[24px] w-[24px]" />
             </div>
             {menuOpen ? <MegaMenu1 /> : null}
           </li>
           <li
-            onMouseLeave={() => {
-              setMenuOpen1(false);
-            }}
-            onMouseEnter={() => {
-              setMenuOpen1(true);
-            }}
+            onMouseLeave={() => setMenuOpen1(false)}
+            onMouseEnter={() => setMenuOpen1(true)}
           >
             <div className="flex cursor-pointer items-center">
               <Heading
@@ -66,38 +58,30 @@ export default function Header({ ...props }) {
               >
                 For High School
               </Heading>
-              <Img src="" alt="Dropdown Icon" classame="h-[24px] w-[24px]" />
+              <Img src="" alt="Dropdown Icon" className="h-[24px] w-[24px]" />
             </div>
             {menuOpen1 ? <MegaMenu1 /> : null}
           </li>
 
           <li
-            onMouseLeave={() => {
-              setMenuOpen2(false);
-            }}
-            onMouseEnter={() => {
-              setMenuOpen2(true);
-            }}
+            onMouseLeave={() => setMenuOpen2(false)}
+            onMouseEnter={() => setMenuOpen2(true)}
           >
             <div className="flex cursor-pointer items-center">
               <Heading
                 as="p"
-                className="text-[16px] font-medium text-[#@a833c]"
+                className="text-[16px] font-medium text-[#0a033c]"
               >
                 For College
               </Heading>
-              <Img sre="" alt="Dropdown Icon" className="h-[24px] u-[24px]" />
+              <Img src="" alt="Dropdown Icon" className="h-[24px] w-[24px]" />
             </div>
             {menuOpen2 ? <MegaMenu1 /> : null}
           </li>
 
           <li
-            onMouseLeave={() => {
-              setMenuOpen3(false);
-            }}
-            onMouseEnter={() => {
-              setMenuOpen3(true);
-            }}
+            onMouseLeave={() => setMenuOpen3(false)}
+            onMouseEnter={() => setMenuOpen3(true)}
           >
             <div className="flex cursor-pointer items-center">
               <Heading
@@ -106,7 +90,7 @@ export default function Header({ ...props }) {
               >
                 Courses
               </Heading>
-              <Img src="" alt="Dropdown Icon" className="h-[24px] u-[24px]" />
+              <Img src="" alt="Dropdown Icon" className="h-[24px] w-[24px]" />
             </div>
             {menuOpen3 ? <MegaMenu1 /> : null}
           </li>
@@ -122,9 +106,9 @@ export default function Header({ ...props }) {
           </li>
         </ul>
 
-        <div classMame="ml-[54px] flex items-center gap-2.5 md:ml-0">
+        <div className="ml-[54px] flex items-center gap-2.5 md:ml-0">
           <Heading as="p" className="text-[16px] font-medium text-[#0a033c]">
-            cart (0)
+            Cart (0)
           </Heading>
 
           <a href="#">
@@ -140,7 +124,7 @@ export default function Header({ ...props }) {
             My Account
           </Heading>
           <a href="#">
-            <Img src="i" alt="Profile Icon" className="h-[30px] w-[30px]" />
+            <Img src="" alt="Profile Icon" className="h-[30px] w-[30px]" />
           </a>
         </div>
       </div>

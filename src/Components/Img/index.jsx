@@ -2,7 +2,7 @@ import React from "react";
 
 const Img = ({ className, src = "", alt = "TestImg", ...restProps }) => {
   return (
-    <Img
+    <img
       className={className}
       src={src}
       alt={alt}

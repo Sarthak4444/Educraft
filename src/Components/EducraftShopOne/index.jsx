@@ -5,9 +5,9 @@ export default function EducraftShopOne({ ...props }) {
   return (
     <div
       {...props}
-      className={` ${props.className} flex flex-col items-center w-full gap-2`}
+      className={`${props.className} flex flex-col items-center w-full gap-2`}
     >
-      <div className="self-stretch rounded-[10px] bg-[#FFFFff] p-5">
+      <div className="self-stretch rounded-[10px] bg-[#ffffff] p-5">
         <Img
           src=""
           alt="Product Image"
@@ -22,7 +22,7 @@ export default function EducraftShopOne({ ...props }) {
         >
           The Three Musketeers
         </Heading>
-        <div className="flex items-center Jjustify-between gap-5 self-stretch">
+        <div className="flex items-center justify-between gap-5 self-stretch">
           <Heading
             size="headingxs"
             as="h6"
@@ -34,7 +34,7 @@ export default function EducraftShopOne({ ...props }) {
             value={5}
             isEditable={true}
             color="#ffc107"
-            activecolor="#ffc107"
+            activeColor="#ffc107"
             size={16}
             className="flex gap-2.5"
           />

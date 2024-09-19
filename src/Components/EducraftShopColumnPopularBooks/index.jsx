@@ -7,6 +7,7 @@ const popularBooksList = [
   { bookImage: "" },
   { bookImage: "" },
 ];
+
 export default function EducraftShopColumnPopularBooks({ ...props }) {
   return (
     <div
@@ -21,11 +22,11 @@ export default function EducraftShopColumnPopularBooks({ ...props }) {
         Popular Books
       </Heading>
       <div className="flex flex-col gap-3.5 self-stretch">
-        <Suspense fallback={<div> Loading feed...</div>}>
+        <Suspense fallback={<div>Loading feed...</div>}>
           {popularBooksList.map((d, index) => (
             <div
               key={"bookList" + index}
-              className="flex flex-1 items-center gap-3.5 rounded-[10px] bg-[#Ffffff] p-5"
+              className="flex flex-1 items-center gap-3.5 rounded-[10px] bg-[#ffffff] p-5"
             >
               <Img
                 src={d.bookImage}
@@ -37,7 +38,7 @@ export default function EducraftShopColumnPopularBooks({ ...props }) {
                   value={5}
                   isEditable={true}
                   color="#ffc107"
-                  activecolor="#ffc167"
+                  activeColor="#ffc167"
                   size={16}
                   className="flex gap-2.5"
                 />
@@ -46,11 +47,9 @@ export default function EducraftShopColumnPopularBooks({ ...props }) {
                   as="h6"
                   className="text-[10px] font-semibold leading-[21px] text-[#000000]"
                 >
-                  <>
-                    The Three Musketeers, by
-                    <br />
-                    Alexandre Dumas
-                  </>
+                  The Three Musketeers, by
+                  <br />
+                  Alexandre Dumas
                 </Heading>
 
                 <Heading
@@ -70,7 +69,7 @@ export default function EducraftShopColumnPopularBooks({ ...props }) {
         <Heading
           size="textlg"
           as="p"
-          className="text- [2px] font-medium text-[#d97356]"
+          className="text-[12px] font-medium text-[#d97356]"
         >
           See More
         </Heading>

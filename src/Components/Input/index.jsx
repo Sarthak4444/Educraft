@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const shapes = {
-  round: "rounded-t1-[10px] rounded-bl-[10px]",
+  round: "rounded-tl-[10px] rounded-bl-[10px]",
 };
 const variants = {
   fill: {
@@ -15,6 +15,7 @@ const sizes = {
   xs: "h-[50px] pl-[10px] pr-[34px] text-[16px]",
   sm: "h-[58px] pl-5 pr-[34px] text-[16px]",
 };
+
 const Input = React.forwardRef(
   (
     {
@@ -36,13 +37,11 @@ const Input = React.forwardRef(
   ) => {
     return (
       <label
-        ClassName={` ${className} flex items-center justify-center cursor-text rounded-tl-[10px] rounded-bl-[10px] text-[16px] ${
+        className={` ${className} flex items-center justify-center cursor-text ${
           shape && shapes[shape]
-        } ${variant && (variants[variant]?.[color] || variants[variant])} ${
-          size && sizes[size]
-        } `}
+        } ${variant && variants[variant]?.[color]} ${size && sizes[size]}`}
       >
-        {!!label && label}
+        {label && <span>{label}</span>}
         {!!prefix && prefix}
         <input
           ref={ref}

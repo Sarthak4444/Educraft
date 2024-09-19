@@ -21,15 +21,15 @@ const CheckBox = React.forwardRef(
     },
     ref
   ) => {
-    const handleChange = (e = {
+    const handleChange = (e) => {
       if(onChange) {
         onChange(e?.target?.checked);
-      },
-    });
+      }
+    };
     return (
       <>
         <div
-          className={className + " flex items-center gap-[Spx] cursor-pointer"}
+          className={className + " flex items-center gap-[5px] cursor-pointer"}
         >
           <input
             className={` ${(size && sizes[size]) || ""} ${

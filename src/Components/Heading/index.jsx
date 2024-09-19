@@ -8,10 +8,10 @@ const sizes = {
   headingxs: "text-[20px] font-semibold sm:text-[17px]",
   headings: "text-[25px] font-semibold md:text-[23px] sm:text-[21px]",
   headingmd: "text-[30px] font-semibold md:text-[28px] sm:text-[25px]",
-  headinglg: "text-[25px] font-semibold md:text-[23px] sm:text-[21px]",
-  headingxl: "text-[30px] font-semibold md:text-[28px] sm:text-[25px]",
+  headinglg: "text-[35px] font-semibold md:text-[32px] sm:text-[28px]",
+  headingxl: "text-[40px] font-semibold md:text-[36px] sm:text-[32px]",
   heading2xl: "text-[48px] font-bold md:text-[38px] sm:text-[34px]",
-  heading3xl: "text-[45px] font-bold md:text-[41px] sm:text-[38px]",
+  heading3xl: "text-[55px] font-bold md:text-[45px] sm:text-[40px]",
   texts: "text-[14px] font-medium not-italic",
 };
 
@@ -25,11 +25,12 @@ const Heading = ({
   const Component = as || "h6";
   return (
     <Component
-      className={` text-[#5d5a6f] font-['Poppins'] ${className} ${sizes[size]}`}
+      className={`text-[#5d5a6f] font-['Poppins'] ${className} ${sizes[size]}`}
       {...restProps}
     >
       {children}
     </Component>
   );
 };
+
 export { Heading };

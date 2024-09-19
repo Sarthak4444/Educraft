@@ -9,14 +9,14 @@ export default function UserProfile({
   return (
     <div
       {...props}
-      className={` ${props.className} flex items-center gap-2.5 p-2.5 flex-1 cursor-pointer rounded-[10px] hover:shadow-[0_50px_50px_0_#00000019]`}
+      className={` ${props.className} flex items-center gap-3 p-2.5 flex-1 cursor-pointer rounded-lg hover:shadow-lg`}
     >
       <Img
         src=""
-        alt="Maths Image"
-        className="h-[50px] w-[22%] rounded-[5px] object-contain"
+        alt="Profile Image"
+        className="h-[50px] w-[50px] rounded-md object-cover"
       />
-      <div className="flex flex-1 flex-col items-start justify-center gap-0.5">
+      <div className="flex flex-1 flex-col items-start justify-center gap-1">
         <Heading
           size="headingxs"
           as="h6"
