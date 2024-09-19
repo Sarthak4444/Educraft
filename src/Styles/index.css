@@ -6,13 +6,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {
   box-sizing: border-box;
   line-height: normal;
-  font-family: inherit;
+  font-family: Arial, Helvetica, sans-serif;
   margin: unset;
 }
 
