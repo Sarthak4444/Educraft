@@ -44,10 +44,12 @@ export default function EducraftPage() {
       <div className="flex u-full flex-col gap-[100px] bg-[#f7f7f7] md:gap-[75px] sm:gap-[50px]">
         <BreadCrumbSection />
         <div className="flex justify-center">
-          <div className="container-xs flex flex-col items-start justify-center gap-10 md:flex-row md:px-5">
-            <div className="flex w-[32%] flex-col gap-[38px] md:u-full">
+          <div className="container-xs flex flex-col items-start justify-center gap-10 lg:flex-row md:px-5">
+            <div className="flex lg:w-[32%] flex-row lg:flex-col gap-[38px] w-full pl-4">
               <EducraftShopColumnPopularBooks />
+              <div className="sm:flex hidden">
               <EducraftShopColumnPopularBooks />
+              </div>
             </div>
             <div className="flex flex-1 flex-col items-center gap-10 self-center md:self-stretch">
               <div className="flex flex-col gap-[30px] self-stretch">
@@ -56,8 +58,8 @@ export default function EducraftPage() {
                   selectedTabClassName="!text-[#FffFFF] !bg-[#eebc74] rounded-[10px]"
                   selectedTabPanelClassName="tab-panel--selected"
                 >
-                  <div className="container-xs flex flex-col items-center md:px-5">
-                    <TabList className="flex flex-grow gap-4">
+                  <div className="container-xs flex-col md:flex hidden items-center md:px-5">
+                    <TabList className="flex flex-grow md:flex-row flex-col gap-4">
                       <Tab className="p-4 text-[16px] tracking-wide px-7 font-semibold text-[#0a033c] bg-white">
                         All Books
                       </Tab>
@@ -86,7 +88,7 @@ export default function EducraftPage() {
                     <TabPanel></TabPanel>
                   </div>
                 </Tabs>
-                <div className="grid grid-cols-3 justify-center gap-3.5 md:grid-cols-2 sm:grid-cols-1">
+                <div className="grid grid-cols-2 justify-center gap-3.5 md:grid-cols-3">
                   <Suspense fallback={<div> Loading feed...</div>}>
                     {BooksList}
                   </Suspense>

@@ -25,9 +25,9 @@ export default function SubscriptionSection() {
         <div className="flex md:w-2/4 flex-col gap-10 px-14 w-full md:px-5">
           <div className="flex flex-col items-center justify-center gap-[26px]">
             <Heading
-              size="heading3xl"
+          
               as="h2"
-              className="text-center font-['Poppins'] text-[45px] font-bold leading-[55px] text-[#ffffff] md:text-[41px] sm:text-[35px]"
+              className="text-center font-['Poppins'] text-[35px] font-extrabold leading-[55px] text-[#ffffff] sm:text-[45px]"
             >
               <>
                 Subscribe To Get Update
@@ -37,7 +37,7 @@ export default function SubscriptionSection() {
             </Heading>
             <Heading
               as="h3"
-              className="text-[16px] font-normal text-[#ffffffb2]"
+              className="text-[16px] font-normal text-[#ffffffb2] "
             >
               26k+ students daily learn with Educraft. Subscribe for new
               courses.
@@ -53,7 +53,7 @@ export default function SubscriptionSection() {
             />
             <Button
               size="xl"
-              className="min-w-[138px] rounded-br-[10px] rounded-tr-[10px] px-[30px] md:!rounded-tl-[0] md:!rounded-bl-[0] !rounded-[10px] font-medium sm:px-5"
+              className="min-w-[138px] rounded-br-[10px] rounded-tr-[10px] md:mt-0 mt-4 px-[30px] md:!rounded-tl-[0] md:!rounded-bl-[0] !rounded-[10px] font-medium sm:px-5"
             >
               Subscribe
             </Button>
