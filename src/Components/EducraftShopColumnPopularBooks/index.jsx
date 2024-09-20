@@ -1,19 +1,32 @@
 import { Heading, Img, RatingBar } from "./../../Components";
 import React from "react";
 import { Suspense } from "react";
+import { NavLink } from "react-router-dom";
 
 const popularBooksList = [
-  { bookImage: "" },
-  { bookImage: "" },
-  { bookImage: "" },
+  { Image: "Public/Images/Rework_book.png",
+    Name : "Rework",
+    Author : "Jason Fried",
+    Rating : 4,
+    Price : 35
+   },
+  { Image: "Public/Images/Dopamin-Detox_book.png",
+    Name : "Dopamin Detox",
+    Author : "Thibaut Mearisse",
+    Rating : 3,
+    Price : 28
+   },
+  { Image: "Public/Images/Atomic-Habits_book.png",
+    Name : "Atomic Habits",
+    Author : "James Clear",
+    Rating : 5,
+    Price : 42
+   },
 ];
 
-export default function EducraftShopColumnPopularBooks({ ...props }) {
+export default function EducraftShopColumnPopularBooks() {
   return (
-    <div
-      {...props}
-      className={`${props.className} flex flex-col items-start gap-3.5 flex-1`}
-    >
+    <div className="flex flex-col items-start gap-3.5 flex-1">
       <Heading
         size="headingxl"
         as="h3"
@@ -29,15 +42,15 @@ export default function EducraftShopColumnPopularBooks({ ...props }) {
               className="flex flex-1 items-center gap-3.5 rounded-[10px] bg-[#ffffff] p-5"
             >
               <Img
-                src={d.bookImage}
+                src={d.Image}
                 alt="Book Image"
                 className="h-[98px] w-[22%] rounded-[5px] object-contain"
               />
               <div className="flex flex-1 flex-col items-start gap-2.5">
                 <RatingBar
-                  value={5}
+                  value={d.Rating}
                   isEditable={true}
-                  color="#ffc107"
+                  color="#CDC9C2"
                   activeColor="#ffc167"
                   size={16}
                   className="flex gap-2.5"
@@ -47,9 +60,9 @@ export default function EducraftShopColumnPopularBooks({ ...props }) {
                   as="h6"
                   className="text-[10px] font-semibold leading-[21px] text-[#000000]"
                 >
-                  The Three Musketeers, by
+                  {d.Name}, by
                   <br />
-                  Alexandre Dumas
+                  {d.Author}
                 </Heading>
 
                 <Heading
@@ -57,7 +70,7 @@ export default function EducraftShopColumnPopularBooks({ ...props }) {
                   as="h6"
                   className="text-[18px] font-semibold text-[#d97356]"
                 >
-                  $39.00
+                  ${d.Price}.00
                 </Heading>
               </div>
             </div>
@@ -65,15 +78,15 @@ export default function EducraftShopColumnPopularBooks({ ...props }) {
         </Suspense>
       </div>
 
-      <a href="#">
+      <NavLink to="/EducraftCourses?tab=all-courses">
         <Heading
           size="textlg"
           as="p"
-          className="text-[12px] font-medium text-[#d97356]"
+          className="text-[16px] font-semibold text-[#d97356]"
         >
           See More
         </Heading>
-      </a>
+     </NavLink>
     </div>
   );
 }

@@ -5,12 +5,12 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import NotFound from "./Pages/NotFound";
-import Educraft from "./Pages/Educraft";
 import EducraftCourses from "./Pages/EducraftCourses";
 import EducraftCoursesDetails from "./Pages/EducraftCoursesDetails";
 import EducraftCoursesPricing from "./Pages/EducraftCoursesPricing";
 import EducraftJoinAsTeacher from "./Pages/EducraftJoinAsTeacher";
 import AllMentors from "./Pages/AllMentors";
+import EducraftPage from "./Pages/Educraft";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Educraft />,
+        element: <EducraftPage />,
       },
       {
         path: "/EducraftCourses",

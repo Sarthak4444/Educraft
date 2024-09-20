@@ -35,7 +35,7 @@ export default function EducraftPage() {
                   <Button
                     color="orange_200_01"
                     size="md"
-                    cLassName="min-u-[130px] rounded-[10px] px-[30px] font-medium sm:px-5"
+                    className="min-u-[130px] rounded-[10px] px-[30px] font-medium sm:px-5"
                   >
                     All Books
                   </Button>
@@ -68,7 +68,7 @@ export default function EducraftPage() {
                     name="Search Field"
                     placeholder={` Search Class, Course, Book Name`}
                     value={searchBarvalue5}
-                    onchange={(e) => setSearchBarvalue5(e.target.value)}
+                    onChange={(e) => setSearchBarvalue5(e.target.value)}
                     suffix={
                       <div className="flex h-[46px] w-[46px] items-center justify-center rounded-lg">
                         {searchBarvalue5?.length > 0 ? (
@@ -128,7 +128,7 @@ export default function EducraftPage() {
                 <Button
                   color="white_A700"
                   size="xs"
-                  cLassName="min-w-[42px] rounded-lg px-3.5 font-medium !text-[#5d5a6f]"
+                  className="min-w-[42px] rounded-lg px-3.5 font-medium !text-[#5d5a6f]"
                 >
                   5
                 </Button>

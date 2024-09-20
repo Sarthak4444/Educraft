@@ -53,7 +53,7 @@ export default function SubscriptionSection() {
                 className="flex-grow !rounded-bl-[10px] !rounded-tl-[10px] font-medium"
               />
               <Button
-                size="x1"
+                size="xl"
                 className="min-w-[138px] rounded-br-[10px] rounded-tr-[10px] px-[30px] font-medium sm:px-5"
               >
                 Subscribe

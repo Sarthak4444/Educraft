@@ -4,12 +4,36 @@ import HighSchoolCoursesSection from "./HighSchoolCoursesSection";
 import StandardClassesSection from "./StandardClassesSection";
 import React from "react";
 import { TabList, Tab, Tabs } from "react-tabs";
+import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export default function EducraftCoursesPage() {
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState("all-courses");
+
+  const tabNames = [
+    "all-courses",
+    "kindergarten",
+    "high-school",
+    "college",
+    "computer",
+    "science",
+    "engineering",
+    "more-courses"
+  ];
+
+  useEffect(() => {
+    const currentTab = new URLSearchParams(location.search).get("tab");
+    const tabIndex = tabNames.indexOf(currentTab);
+    if (tabIndex !== -1) {
+      setActiveTab(tabIndex);
+    }
+  }, [location.search]);
+
   return (
     <>
       <Helmet>
-        <title>
+        <title>      
           Educraft Courses - Comprehensive Learning for ALL Standards
         </title>
         <meta
@@ -20,6 +44,8 @@ export default function EducraftCoursesPage() {
       <div className="flex u-full flex-col gap-[188px] bg-[#f7f7f7] md:gap-[75px] sm:gap-[50px]">
         <HeroBanner />
         <Tabs
+          selectedIndex={activeTab}
+          onSelect={(index) => setActiveTab(index)}
           className="flex flex-col items-center gap-[46px]"
           selectedTabClassName="!text-[#FffFFF] bg-[#eebc74] rounded-[10px]"
           selectedTabPanelClassName="tab-panel--selected"
