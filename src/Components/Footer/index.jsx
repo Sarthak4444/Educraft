@@ -1,312 +1,91 @@
 import { Heading, Img } from "..";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="flex justify-center">
-      <div className="container-xs flex items-start justify-between gap-5 md:flex-col md:px-5">
-        <div className="flex w-[14%] flex-col gap-[46px] md:w-full">
-          <div className="mr-1.5 flex flex-col gap-[22px] md:mr-0">
-            <Img
-              src=""
-              alt="Logo Image"
-              className="h-[30px] object-contain md:w-[172px]"
-            />
-            <div className="mx-3 flex items-center justify-center gap-3.5 md:mx-0">
-              <Img src="" alt="Facebook Icon" className="h-[22px] w-[22px]" />
-              <Img src="" alt="User Icon" className="h-[36px] w-[36px]" />
-              <Img src="" alt="Twitter Icon" className="h-[16px]" />
-              <Img
-                src=""
-                alt="Linkedin Icon"
-                className="h-[18px] object-cover"
-              />
-            </div>
+    <div className="flex justify-center bg-[#F5F5F5] py-8 mx-auto">
+      <div className="container flex flex-grow justify-between gap-5 px-5 md:flex-row flex-col">
+        <div className="flex w-1/4 flex-col gap-6 md:w-full md:items-center">
+          <Img
+            src="Public/Logo/Name And Logo.png"
+            alt="Logo Image"
+            className="w-[100px] object-contain md:w-[200px]"
+          />
+          <div className="flex justify-center gap-3.5">
+          <i className="fa-brands fa-facebook-f text-[#1F2937] text-3xl"></i>
+          <i className="fa-brands fa-instagram text-[#1F2937] text-3xl"></i>
+          <i className="fa-brands fa-twitter text-[#1F2937] text-3xl"></i>
+          <i className="fa-brands fa-linkedin text-[#1F2937] text-3xl"></i>
           </div>
-          <div className="flex flex-col items-start gap-3.5">
-            <Heading as="p" className="text-[16px] font-normal text-[#5d5a6f]">
-              ©2021 Educraft
-            </Heading>
-            <Heading as="p" className="text-[16px] font-normal text-[#5d5a6f]">
-              Educraft is a Registered
-            </Heading>
+          <div className="flex flex-col items-center gap-1">
+            <p className="text-sm text-gray-600">©2021 Educraft</p>
+            <p className="text-sm text-gray-600">Educraft is a Registered</p>
           </div>
         </div>
-        <div className="mr-[106px] flex w-[76%] items-center justify-between gap-5 self-center md:mr-0 md:w-full md:flex-col">
-          <Heading
-            size="headingmd"
-            as="h5"
-            className="text-[22px] font-semibold text-[#0a033c]"
-          >
+
+
+        <div className="w-1/4 md:w-full">
+          <Heading size="headingmd" as="h5" className="text-lg font-semibold text-gray-800">
             Courses
           </Heading>
-          <ul className="flex w-[64%] flex-col items-start gap-6 md:w-full">
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Classroom courses
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="u-full leading-[30px]">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Virtual classroom courses
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  E-learning courses
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Video Courses
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Offline Courses
-                </Heading>
-              </a>
-            </li>
+          <ul className="mt-4 space-y-2">
+            {["Classroom courses", "Virtual classroom courses", "E-learning courses", "Video Courses", "Offline Courses"].map((course, index) => (
+              <li key={index}>
+                <Link to="/" className="text-sm text-gray-600 hover:text-gray-800">
+                  {course}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
-        <div className="flex w-[30%] flex-col items-start gap-[22px] md:w-full">
-          <Heading
-            size="headingmd"
-            as="h5"
-            className="text-[22px] font-semibold text-[#0a033c]"
-          >
+
+        <div className="w-1/4 md:w-full">
+          <Heading size="headingmd" as="h5" className="text-lg font-semibold text-gray-800">
             Community
           </Heading>
-          <ul className="flex flex-col items-start gap-6">
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Learners
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Partners
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Developers
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Transactions
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Blog
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Teaching Center
-                </Heading>
-              </a>
-            </li>
+          <ul className="mt-4 space-y-2">
+            {["Learners", "Partners", "Developers", "Transactions", "Blog", "Teaching Center"].map((item, index) => (
+              <li key={index}>
+                <Link to="/" className="text-sm text-gray-600 hover:text-gray-800">
+                  {item}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
-        <div className="flex w-[30%] flex-col items-start gap-[22px] md:w-full">
-          <Heading
-            size="headingmd"
-            as="h5"
-            className="text-[22px] font-semibold text-[#0a033c]"
-          >
-            Quick links
+
+        <div className="w-1/4 md:w-full">
+          <Heading size="headingmd" as="h5" className="text-lg font-semibold text-gray-800">
+            Quick Links
           </Heading>
-          <ul className="flex flex-col items-start gap-6">
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Home
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Professional Education
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Courses
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Admissions
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Testimonials
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Programs
-                </Heading>
-              </a>
-            </li>
+          <ul className="mt-4 space-y-2">
+            {["Home", "Professional Education", "Courses", "Admissions", "Testimonials", "Programs"].map((link, index) => (
+              <li key={index}>
+                <Link to="/" className="text-sm text-gray-600 hover:text-gray-800">
+                  {link}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
-        <div className="flex flex-col items-start gap-[22px]">
-          <Heading
-            size="headingmd"
-            as="h5"
-            className="text-[22px] font-semibold text-[#02033c]"
-          >
+
+        <div className="w-1/4 md:w-full">
+          <Heading size="headingmd" as="h5" className="text-lg font-semibold text-gray-800">
             More
           </Heading>
-          <ul className="flex flex-col items-start gap-6">
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Press
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Investors
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Terms
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Privacy
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Help
-                </Heading>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <Heading
-                  as="p"
-                  className="text-[16px] font-normal text-[#5d5a6f]"
-                >
-                  Contact
-                </Heading>
-              </a>
-            </li>
+          <ul className="mt-4 space-y-2">
+            {["Press", "Investors", "Terms", "Privacy", "Help", "Contact"].map((item, index) => (
+              <li key={index}>
+                <Link to="/" className="text-sm text-gray-600 hover:text-gray-800">
+                  {item}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
+        </div>
       </div>
-    </div>
+    
   );
 }
