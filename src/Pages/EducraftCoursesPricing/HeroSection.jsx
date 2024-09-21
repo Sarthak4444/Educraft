@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <>
       <div className="container-xs flex justify-center md:px-5">
-        <div className="flex w-full rounded-[20px] bg-[#ffeee9] px-[30px] py-5 sm:px-5">
+        <div className="flex w-full rounded-[20px] bg-[#e1fbd9] px-[30px] py-5 sm:px-5">
           <div className="w-full px-8 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between">
             <div>
               <Heading className="mb-10 text-xl font-medium text-[#000000]">

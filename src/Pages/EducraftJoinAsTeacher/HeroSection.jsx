@@ -1,106 +1,39 @@
-import { Button, Heading, Img } from "../../Components";
+import { Img, Heading } from "../../Components";
 import React from "react";
-import { TabPanel, TabList, Tab, Tabs } from "react-tabs";
 
 export default function HeroSection() {
   return (
     <>
-      <div className="flex justify-center">
-        <div className="container-xs flex items-center justify-between gap-5 md:flex-col md:px-5">
-          <Img
-            src=""
-            alt="Featured Image"
-            className="ml-5 h-[520px] w-[40%] object-contain md:ml-0 md:w- full"
-          />
-          <div className="flex u-[46%] flex-col items-start gap-[30px] md:w-full">
-            <div className="flex flex-col items-start justify-center gap-2.5 self-stretch">
+      <div className="container-xs flex justify-center md:px-5">
+        <div className="flex w-full rounded-[20px] bg-[#eddcd2] px-[30px] py-5 sm:px-5">
+          <div className="w-full px-8 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <div>
               <Heading
-                size="headingxl"
-                as="h2"
-                className="text -[30px] font-semibold text-[#0a033c] md:text-[28px] sm:text-[26px]"
+                as="h1"
+                className="mt-1 mb-10 text-xl font-medium text-[#000000]"
               >
-                Apply As Instructor
+                Home | Become An Instructor
               </Heading>
               <Heading
-                as="h3"
-                className="w-full text-[16px] font-normal leading-[30px] text-[#5d5a6f]"
+                as="h2"
+                className="text-[45px] font-semibold leading-[54px] text-[#0a033c] md:w-full"
               >
-                Teaching is a vital and admirable career. As such, it comes with
-                quite a bit of responsibility, both i practice and in
-                preparation with many skills required to be a teacher. The
-                following steps provide a general breakdown of the requirements
-                for teachers:
+                <>
+                  Join Educraft 
+                  <br />
+                  As a
+                  <br />
+                  Teacher
+                </>
               </Heading>
             </div>
-            <Tabs
-              className="flex flex-col items-center justify-center gap-[26px] self-stretch"
-              selectedTabClassName="text-[#d97356]"
-              selectedTabPanelClassName="!relative tab-panel--selected"
-            >
-              <TabList className="flex flex-wrap items-start gap-9 py-1">
-                <Tab className="mb-2 text-[16px] font -medium text-[#5d5a6F]">
-                  
-                  Instructor Requirements
-                </Tab>
-                <Tab className="text-[16px] font-medium text-[#5d5a6f]">
-                  
-                  Instructor Rules
-                </Tab>
-              </TabList>
-              {[...Array(2)].map((_, index) => (
-                <TabPanel
-                  key={`tab-panel${index} `}
-                  className="absolute justify-center self-stretch"
-                >
-                  <div className="w-full self-stretch">
-                    <div className="flex flex-col gap-[18px]">
-                      <div className="flex items-start gap-2.5">
-                        <div className="h-[10px] w-[10px] rounded-[5px] bg-[#d97356]" />
-                        <Heading
-                          as="h4"
-                          className="self-center text-[16px] font-normal text-[#0a033c]"
-                        >
-                          An undergraduate degree
-                        </Heading>
-                      </div>
-                      <div className="flex items-start gap-2.5">
-                        <div className="h-[10px] w-[10px] rounded- [5px] bg-[#d97356]" />
-                        <Heading
-                          as="h5"
-                          className="self-center text-[16px] font-normal text-[#0a033c]"
-                        >
-                          Participate in supervised teaching
-                        </Heading>
-                      </div>
-                      <div className="flex items-start gap-2.5">
-                        <div className="h-[10px] w-[10px] rounded- [5px] bg-[#d97356]" />
-                        <Heading
-                          as="h6"
-                          className="self-center text-[16px] font-normal text-[#0a033c]"
-                        >
-                          State teaching license
-                        </Heading>
-                      </div>
-                      <div className="flex items-start gap-2.5">
-                        <div className="h-[10px] w-[10px] rounded- [5px] bg-[#d97356]" />
-                        <Heading
-                          as="p"
-                          className="self-center text-[16px] font-normal text-[#0a033c]"
-                        >
-                          Post graduate studies
-                        </Heading>
-                      </div>
-                    </div>
-                  </div>
-                </TabPanel>
-              ))}
-            </Tabs>
-            <Button
-              size="md"
-              className="min-w-[142px] rounded-[10px] px-[30px] font-medium sm:px-5"
-            >
-              Apply Now
-            </Button>
+            <div>
+              <Img
+                src="data:image/jpeg;base64,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"
+                alt="Brand Logo"
+                className="h-[200px] object-contain mt-6 sm:mt-0 rounded-2xl md:w-full"
+              />
+            </div>
           </div>
         </div>
       </div>

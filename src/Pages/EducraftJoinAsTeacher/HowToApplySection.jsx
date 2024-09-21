@@ -13,12 +13,12 @@ export default function HowToApplySection() {
           >
             How to apply to join as instructor
           </Heading>
-          <div className="flex w-[90%] justify-center rounded-[20px] bg-[#fFffff] p-2 shadow-[0_50px_170px_0_#0000000C] md:w-full">
+          <div className="flex w-[80%] justify-center rounded-[20px] bg-[#fFffff] p-2 shadow-[0_50px_170px_0_#0000000C] md:w-full">
             <div className="mt-1.5 w-full bg-[#FFFFFf]">
               <Img
-                src=""
+                src="https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148910729.jpg?t=st=1726937549~exp=1726941149~hmac=34799cfbf7a0dde47fca4b4e30e868f108bf8d603139871c016dba5793fb7976&w=826"
                 alt="Background Image"
-                className="h-[576px] w-full rounded-[20px] object-cover md:h-auto"
+                className="md:h-[500px] w-full rounded-[20px] object-cover h-auto"
               />
             </div>
           </div>

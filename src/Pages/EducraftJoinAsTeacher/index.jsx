@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import EducraftJoinAsTeacherRow from "./EducraftJoinAsTeacherRow";
+import ApplyAsInstructure from "./ApplyAsInstructure";
 import HeroSection from "./HeroSection";
 import HowToApplySection from "./HowToApplySection";
 import React from "react";
@@ -15,8 +15,8 @@ export default function EducraftJoinAsTeacher() {
         />
       </Helmet>
       <div className="flex u-full flex-col gap-[100px] bg-[#f7f7f7] md:gap-[75px] sm:gap-[50px]">
-        <EducraftJoinAsTeacherRow />
         <HeroSection />
+        <ApplyAsInstructure />
         <HowToApplySection />
       </div>
     </>

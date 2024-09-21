@@ -43,7 +43,7 @@ export default function Header() {
   }, [menuNav]);
 
   return (
-    <header className="flex justify-between items-center py-2 px-6 bg-[#f7f7f7]">
+    <header className="sticky top-0 z-50 flex justify-between items-center py-2 px-6 bg-[#f7f7f7]">
       <div
         className={`${
           menuNav ? "absolute" : "hidden"

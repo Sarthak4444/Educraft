@@ -1,87 +1,143 @@
-import { Button, Img, Heading } from "../../Components";
+import { Button, Heading } from "../../Components";
 import AllMentorsMaincard from "../../Components/AllMentorsMainCard";
 import React, { Suspense } from "react";
 import { TabPanel, TabList, Tab, Tabs } from "react-tabs";
+import { useState } from "react";
 export default function MentorTabs() {
+  const Data = [
+    { name: "Alice Johnson", designation: "Software Engineer" },
+    { name: "Bob Smith", designation: "Product Manager" },
+    { name: "Catherine Lee", designation: "Data Scientist" },
+    { name: "David Brown", designation: "Marketing Specialist" },
+    { name: "Emma Davis", designation: "UX/UI Designer" },
+    { name: "Frank Miller", designation: "DevOps Engineer" },
+    { name: "Grace Wilson", designation: "HR Manager" },
+    { name: "Henry Clark", designation: "Business Analyst" },
+    { name: "Irene Thompson", designation: "Sales Executive" },
+    { name: "Jack Evans", designation: "Graphic Designer" },
+    { name: "Karen Lewis", designation: "Finance Manager" },
+    { name: "Luke Anderson", designation: "Front-End Developer" },
+    { name: "Megan Adams", designation: "Operations Manager" },
+    { name: "Nathan Scott", designation: "Cybersecurity Analyst" },
+    { name: "Olivia Walker", designation: "Technical Writer" },
+    { name: "Paul Harris", designation: "Project Coordinator" },
+    { name: "Quincy Rogers", designation: "Cloud Architect" },
+    { name: "Rebecca Perez", designation: "Legal Advisor" },
+    { name: "Samuel Morgan", designation: "AI Researcher" },
+    { name: "Tina Carter", designation: "Content Strategist" },
+    { name: "Alice Johnson", designation: "Software Engineer" },
+    { name: "Bob Smith", designation: "Product Manager" },
+    { name: "Catherine Lee", designation: "Data Scientist" },
+    { name: "David Brown", designation: "Marketing Specialist" },
+    { name: "Emma Davis", designation: "UX/UI Designer" },
+    { name: "Frank Miller", designation: "DevOps Engineer" },
+    { name: "Jack Evans", designation: "Graphic Designer" },
+    { name: "Karen Lewis", designation: "Finance Manager" },
+    { name: "Luke Anderson", designation: "Front-End Developer" },
+    { name: "Megan Adams", designation: "Operations Manager" },
+    { name: "Nathan Scott", designation: "Cybersecurity Analyst" },
+    { name: "Olivia Walker", designation: "Technical Writer" },
+  ];
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(Data.length / 6);
+  const indexOfLastItem = currentPage * 6;
+  const indexOfFirstItem = indexOfLastItem - 6;
+  const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const BooksList = currentItems.map((d, index) => (
+    <AllMentorsMaincard
+      key={"booksGrid" + index}
+      name={d.name}
+      post={d.designation}
+    />
+  ));
   return (
     <>
-      <div>
-        <Tabs
-          className="flex flex-col items-center"
-          selectedTabClassName="!text-[#FffFFF] bg-[#eebc74] rounded-[10px]"
-          selectedTabPanelClassName=" relative tab-panel--selected"
-        >
-          <div className="container-xs flex flex-col items-center gap-[50px] md:px-5">
-            <TabList className="mx-[180px] flex flex-wrap gap-5 md:mx-g">
-              <Tab className="px-[30px] py-3.5 text-[16px] font-medium text-[#0a033c] sm:px-5">
-                ALL Mentors
-              </Tab>
+      <div className="flex flex-1 flex-col items-center gap-10 self-center md:self-stretch">
+        <div className="flex flex-col gap-[30px] self-stretch">
+          <Tabs
+            className="flex flex-col items-center gap-[46px]"
+            selectedTabClassName="!text-[#FffFFF] !bg-[#eebc74] rounded-[10px]"
+            selectedTabPanelClassName="tab-panel--selected"
+          >
+            <div className="container-xs flex-col md:flex hidden items-center md:px-5">
+              <TabList className="flex flex-grow md:flex-row flex-col gap-4">
+                <Tab className="p-4 text-[16px] tracking-wide px-7 font-semibold text-[#0a033c] bg-white">
+                  All Books
+                </Tab>
 
-              <Tab className="px-[3px] py-3.5 text-[16px] font-medium text-[#0a033c] sm:px-5">
-                For Kindergarten
-              </Tab>
+                <Tab className="p-4 text-[16px] tracking-wide px-7 font-semibold text-[#0a033c] bg-white">
+                  Kindergarten
+                </Tab>
 
-              <Tab className="px-[3px] py-3.5 text-[16px] font-medium text-[#0a033c] sm:px-5">
-                For high school
-              </Tab>
+                <Tab className="p-4 text-[16px] tracking-wide px-7 font-semibold text-[#0a033c] bg-white">
+                  High School
+                </Tab>
 
-              <Tab className="px-[3px] py-3.5 text-[16px] font-medium text-[#0a033c] sm:px-5">
-                For college
-              </Tab>
+                <Tab className="p-4 text-[16px] tracking-wide px-7 font-semibold text-[#0a033c] bg-white">
+                  College
+                </Tab>
 
-              <Tab className="px-[3px] py-3.5 text-[16px] font-medium text-[#0a033c] sm:px-5">
-                For Technology
-              </Tab>
-            </TabList>
-            {[...Array(5)].map((_, index) => (
-              <TabPanel
-                key={`tab-panel${index} `}
-                className="absolute justify-center self-stretch"
-              >
-                <div className="w-full self-stretch">
-                  <div className="grid grid-cols-4 gap-10 md:grid-cols-2 sm:grid-cols-1">
-                    <Suspense fallback={<div> Loading feed...</div>}>
-                      {[...Array(12)].map((d, index) => (
-                        <AllMentorsMaincard key={"teamGrid" + index} />
-                      ))}
-                    </Suspense>
-                  </div>
-                </div>
-              </TabPanel>
-            ))}
-            <div className="flex items-center gap-[18px]">
-              <Button
-                color="white_A700"
-                shape="round"
-                className="w-[44px] rounded-md px-4"
-              >
-                <Img src="" />
-              </Button>
-              <Heading
-                as="h2"
-                className="mb-2.5 self-end text-[16px] font-medium text-[#0a033c]"
-              >
-                Page
-              </Heading>
-              <Button
-                color="uhite_A700"
-                size="xs"
-                cLassName="min-w-[38px] rounded-lg px-3.5 font-medium |text-[#5d5a6f]"
-              >
-                1
-              </Button>
-              <Heading
-                as="h3"
-                className="text-[16px] font-medium text-[#0a033c]"
-              >
-                of 03
-              </Heading>
-              <Button shape="round" className="u-[44px] rounded-md px-4">
-                <Img src="" />
-              </Button>
+                <Tab className="p-4 text-[16px] tracking-wide px-7 font-semibold text-[#0a033c] bg-white">
+                  More
+                </Tab>
+              </TabList>
+
+              <TabPanel></TabPanel>
+              <TabPanel></TabPanel>
+              <TabPanel></TabPanel>
+              <TabPanel></TabPanel>
+              <TabPanel></TabPanel>
             </div>
+          </Tabs>
+          <div className="grid grid-cols-2 justify-center gap-4 md:gap-10 md:grid-cols-3 mx-auto ">
+            <Suspense fallback={<div> Loading feed...</div>}>
+              {BooksList}
+            </Suspense>
           </div>
-        </Tabs>
+        </div>
+        <div className="flex items-center gap-[10px]">
+          <Button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            color="white_A700"
+            shape="round"
+            className={`${
+              currentPage === 1 ? "!cursor-not-allowed" : ""
+            } w-[42px] rounded-md px-4`}
+          >
+            <i className="fa-solid fa-angle-left text-[#D97356]"></i>
+          </Button>
+          <Heading as="h2" className="text-lg font-medium text-[#0a033c]">
+            Page
+          </Heading>
+          <Button
+            color="white_A700"
+            size="xs"
+            className="min-w-[42px] rounded-lg px-3.5 font-semibold !text-[#D97356]"
+          >
+            {currentPage}
+          </Button>
+          <Heading as="h2" className="text-lg font-medium text-[#0a033c]">
+            of {totalPages}
+          </Heading>
+          <Button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            shape="round"
+            className={`${
+              currentPage === totalPages ? "!cursor-not-allowed" : ""
+            } w-[42px] rounded-md px-4`}
+          >
+            <i className="fa-solid fa-angle-right text-white"></i>
+          </Button>
+        </div>
       </div>
     </>
   );
