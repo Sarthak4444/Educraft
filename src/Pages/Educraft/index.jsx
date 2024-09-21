@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet";
-import { Button, Img, Heading, SelectBox, Input } from "../../Components";
+import { Button, Heading} from "../../Components";
 import EducraftShopColumnPopularBooks from "../../Components/EducraftShopColumnPopularBooks";
 import EducraftShopOne from "../../Components/EducraftShopOne";
-import BreadCrumbSection from "../Educraft/BreadCrumbSection.jsx";
+import HeroSection from "../Educraft/HeroSection.jsx";
 import React, { Suspense } from "react";
 import { TabList, Tab, Tabs, TabPanel } from "react-tabs";
 import { useEffect, useState } from "react";
@@ -42,7 +42,7 @@ export default function EducraftPage() {
         />
       </Helmet>
       <div className="flex u-full flex-col gap-[100px] bg-[#f7f7f7] md:gap-[75px] sm:gap-[50px]">
-        <BreadCrumbSection />
+        <HeroSection />
         <div className="flex justify-center">
           <div className="container-xs flex flex-col items-start justify-center gap-10 lg:flex-row md:px-5">
             <div className="flex lg:w-[32%] flex-row lg:flex-col gap-[38px] w-full pl-4">

@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet";
-import EducraftCoursesPricingRowOne from "./EducraftCoursesPricingRowOne";
 import HeroSection from "./HeroSection";
 import PricingIntro from "./PricingIntro";
 import React from "react";
@@ -15,10 +14,9 @@ export default function EducraftCoursesPricingPage() {
           content="Choose the best education plan for your needs with Educraft's pricing packages. Get access to HD video lessons, offline exams, and personalized support."
         />
       </Helmet>
-      <div className="flex u-full flex-col gap-[100px] bg-[#f7f7f7] md:gap-[75px] sm:gap-[50px]">
+      <div className="flex w-full flex-col gap-[70px] bg-[#f7f7f7]">
         <HeroSection />
         <PricingIntro />
-        <EducraftCoursesPricingRowOne />
       </div>
     </>
   );

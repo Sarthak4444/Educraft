@@ -1,7 +1,7 @@
 import { Img, Heading } from "../../Components";
 import React from "react";
 
-export default function BreadCrumbSection() {
+export default function HeroSection() {
   return (
     <>
       <div className="container-xs flex justify-center md:px-5">
