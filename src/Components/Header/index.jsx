@@ -49,70 +49,64 @@ export default function Header() {
           menuNav ? "absolute" : "hidden"
         } top-0 left-0 w-screen h-screen lg:hidden bg-[#db7d63f3]`}
       >
-        <Button className="absolute top-5 right-5 rounded-full" onClick={handleMenuClick}><i className="fa-solid fa-xmark text-[30px] text-white"></i></Button>
+        <Button
+          className="absolute top-5 right-5 rounded-full"
+          onClick={handleMenuClick}
+        >
+          <i className="fa-solid fa-xmark text-[30px] text-white"></i>
+        </Button>
         <div className="flex justify-center items-center h-full my-auto gap-5 flex-col">
-
           <h1 className="text-[30px] font-bold text-white mb-5">MENU</h1>
-            <Button className="rounded-full px-4" onClick={handleMenuClick}>
-          <NavLink to="/">
-            <Heading
-              as="p"
-              className="text-[20px] tracking-wide font-medium text-white"
-            >
-              Home
-            </Heading>
-          </NavLink>
-            </Button>
-            <Button className="rounded-full px-4" onClick={handleMenuClick}>
-          <NavLink to="/EducraftCourses?tab=all-courses">
-            <Heading
-              as="p"
-              className="text-[20px] tracking-wide font-medium text-white"
-            >
-              Shop
-            </Heading>
-          </NavLink>
-            </Button>
-            <Button className="rounded-full px-4" onClick={handleMenuClick}>
-          <NavLink to="/EducraftCourses?tab=kindergarten">
-            <Heading
-              as="p"
-              className="text-[20px] tracking-wide font-medium text-white"
-            >
-              Kindergarten
-            </Heading>
-          </NavLink>
-            </Button>
-            <Button className="rounded-full px-4" onClick={handleMenuClick}>
-          <NavLink to="/EducraftCourses?tab=high-school">
-            <Heading
-              as="p"
-              className="text-[20px] tracking-wide font-medium text-white"
-            >
-              High School
-            </Heading>
-          </NavLink>
-            </Button>
-            <Button className="rounded-full px-4" onClick={handleMenuClick}>
-          <NavLink to="/EducraftCourses?tab=college">
-            <Heading
-              as="p"
-              className="text-[20px] tracking-wide font-medium text-white"
-            >
-              College
-            </Heading>
-          </NavLink>
-            </Button>
-            <Button className="rounded-full px-4" onClick={handleMenuClick}>
-          <NavLink to="/AllMentors">
-            <Heading
-              as="p"
-              className="text-[20px] tracking-wide font-medium text-white"
-            >
-              Mentors
-            </Heading>
-          </NavLink>
-            </Button>
+          <Button className="rounded-full px-4" onClick={handleMenuClick}>
+            <NavLink to="/">
+              <Heading
+                as="p"
+                className="text-[20px] tracking-wide font-medium text-white"
+              >
+                Home
+              </Heading>
+            </NavLink>
+          </Button>
+          <Button className="rounded-full px-4" onClick={handleMenuClick}>
+            <NavLink to="/EducraftCourses?tab=all-courses">
+              <Heading
+                as="p"
+                className="text-[20px] tracking-wide font-medium text-white"
+              >
+                Shop
+              </Heading>
+            </NavLink>
+          </Button>
+          <Button className="rounded-full px-4" onClick={handleMenuClick}>
+            <NavLink to="/EducraftCoursesPricing">
+              <Heading
+                as="p"
+                className="text-[20px] tracking-wide font-medium text-white"
+              >
+                Pricing
+              </Heading>
+            </NavLink>
+          </Button>
+          <Button className="rounded-full px-4" onClick={handleMenuClick}>
+            <NavLink to="/AllMentors">
+              <Heading
+                as="p"
+                className="text-[20px] tracking-wide font-medium text-white"
+              >
+                Mentors
+              </Heading>
+            </NavLink>
+          </Button>
+          <Button className="rounded-full px-4" onClick={handleMenuClick}>
+            <NavLink to="/EducraftJoinAsTeacher">
+              <Heading
+                as="p"
+                className="text-[20px] tracking-wide font-medium text-white"
+              >
+                Join Us
+              </Heading>
+            </NavLink>
+          </Button>
         </div>
       </div>
       <Button
@@ -133,12 +127,12 @@ export default function Header() {
       </NavLink>
 
       <nav className="hidden lg:flex flex-grow justify-center space-x-6">
-        <NavLink to="/EducraftCourses?tab=all-courses">
+        <NavLink to="/">
           <Heading
             as="p"
             className="text-xl tracking-wide font-medium text-[#0a033c]"
           >
-            Shop
+            Home
           </Heading>
         </NavLink>
         <div
@@ -146,12 +140,12 @@ export default function Header() {
           onMouseEnter={() => setMenuOpen(true)}
           className="relative cursor-pointer"
         >
-          <NavLink to="/EducraftCourses?tab=kindergarten">
+          <NavLink to="/EducraftCourses">
             <Heading
               as="p"
               className="text-xl tracking-wide font-medium text-[#0a033c]"
             >
-              Kindergarten
+              Shop
             </Heading>
           </NavLink>
           {menuOpen && (
@@ -163,12 +157,12 @@ export default function Header() {
           onMouseEnter={() => setMenuOpen1(true)}
           className="relative cursor-pointer"
         >
-          <NavLink to="/EducraftCourses?tab=high-school">
+          <NavLink to="/EducraftCoursesPricing">
             <Heading
               as="p"
               className="text-xl tracking-wide font-medium text-[#0a033c]"
             >
-              High School
+              Pricing
             </Heading>
           </NavLink>
           {menuOpen1 && (
@@ -180,24 +174,24 @@ export default function Header() {
           onMouseEnter={() => setMenuOpen2(true)}
           className="relative cursor-pointer"
         >
-          <NavLink to="/EducraftCourses?tab=college">
+          <NavLink to="/AllMentors">
             <Heading
               as="p"
               className="text-xl tracking-wide font-medium text-[#0a033c]"
             >
-              College
+              Mentors
             </Heading>
           </NavLink>
           {menuOpen2 && (
             <MegaMenu1 className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg z-10" />
           )}
         </div>
-        <NavLink to="/AllMentors">
+        <NavLink to="/EducraftJoinAsTeacher">
           <Heading
             as="p"
             className="text-xl tracking-wide font-medium text-[#0a033c]"
           >
-            Mentors
+            Join Us
           </Heading>
         </NavLink>
       </nav>

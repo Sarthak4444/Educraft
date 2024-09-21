@@ -5,32 +5,10 @@ import React from "react";
 import { Heading } from "../../Components";
 import EducraftCoursesOne from "../../Components/EducraftCoursesOne";
 import { TabList, Tab, Tabs, TabPanel } from "react-tabs";
-import { useLocation } from "react-router-dom";
+
 import { useState, useEffect } from "react";
 
 export default function EducraftCoursesPage() {
-  const location = useLocation();
-  const [activeTab, setActiveTab] = useState("all-courses");
-
-  const tabNames = [
-    "all-courses",
-    "kindergarten",
-    "high-school",
-    "college",
-    "computer",
-    "science",
-    "engineering",
-    "more-courses",
-  ];
-
-  useEffect(() => {
-    const currentTab = new URLSearchParams(location.search).get("tab");
-    const tabIndex = tabNames.indexOf(currentTab);
-    if (tabIndex !== -1) {
-      setActiveTab(tabIndex);
-    }
-  }, [location.search]);
-
   return (
     <>
       <Helmet>
@@ -45,8 +23,6 @@ export default function EducraftCoursesPage() {
       <div className="flex u-full flex-col gap-[70px] bg-[#f7f7f7] ">
         <HeroBanner />
         <Tabs
-          selectedIndex={activeTab}
-          onSelect={(index) => setActiveTab(index)}
           className="flex flex-col justify-center items-center gap-[46px]"
           selectedTabClassName="!text-[#FffFFF] !bg-[#eebc74] rounded-[10px]"
           selectedTabPanelClassName="tab-panel--selected"
@@ -105,8 +81,10 @@ export default function EducraftCoursesPage() {
             </div>
           </div>
         </Tabs>
-        <div className="container-xs text-center"> <HighSchoolCoursesSection /></div>
-       
+        <div className="container-xs text-center">
+          {" "}
+          <HighSchoolCoursesSection />
+        </div>
       </div>
     </>
   );
