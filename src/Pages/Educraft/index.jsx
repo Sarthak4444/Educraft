@@ -48,7 +48,7 @@ export default function EducraftPage() {
             <div className="flex lg:w-[32%] flex-row lg:flex-col gap-[38px] w-full pl-4">
               <EducraftShopColumnPopularBooks />
               <div className="sm:flex hidden">
-              <EducraftShopColumnPopularBooks />
+                <EducraftShopColumnPopularBooks />
               </div>
             </div>
             <div className="flex flex-1 flex-col items-center gap-10 self-center md:self-stretch">
@@ -100,7 +100,9 @@ export default function EducraftPage() {
                   disabled={currentPage === 1}
                   color="white_A700"
                   shape="round"
-                  className={`${currentPage === 1 ? "!cursor-not-allowed" : ""} w-[42px] rounded-md px-4`}
+                  className={`${
+                    currentPage === 1 ? "!cursor-not-allowed" : ""
+                  } w-[42px] rounded-md px-4`}
                 >
                   <i className="fa-solid fa-angle-left text-[#D97356]"></i>
                 </Button>
@@ -121,7 +123,9 @@ export default function EducraftPage() {
                   onClick={() => handlePageChange(currentPage + 1)}
                   disabled={currentPage === totalPages}
                   shape="round"
-                  className={`${currentPage === totalPages ? "!cursor-not-allowed" : ""} w-[42px] rounded-md px-4`}
+                  className={`${
+                    currentPage === totalPages ? "!cursor-not-allowed" : ""
+                  } w-[42px] rounded-md px-4`}
                 >
                   <i className="fa-solid fa-angle-right text-white"></i>
                 </Button>

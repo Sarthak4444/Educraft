@@ -1,12 +1,15 @@
 import { RatingBar, Heading, Img } from "./../../Components";
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 export default function EducraftShopOne(props) {
   const { ...rest } = props;
 
   return (
+    <Link to="/EducraftCoursesDetails">
     <div
-      className={`${props.className} flex flex-col items-center w-full gap-2`}
+      className={`${props.className} flex flex-col items-center w-full gap-2 cursor-pointer`}
     >
       <div className="self-stretch rounded-[10px] bg-[#ffffff] p-5">
         <Img
@@ -42,5 +45,6 @@ export default function EducraftShopOne(props) {
         </div>
       </div>
     </div>
+    </Link>
   );
 }
