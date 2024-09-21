@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container flex flex-grow justify-between gap-5 px-5 md:flex-row flex-col">
         <div className="flex md:w-1/4 flex-col gap-6 w-full items-center">
           <Img
-            src="Public/Logo/Name And Logo.png"
+            src="Public/Logo/Name And Logo.svg"
             alt="Logo Image"
             className="object-contain w-[200px]"
           />

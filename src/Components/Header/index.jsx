@@ -119,7 +119,7 @@ export default function Header() {
       <NavLink to="/">
         <div className="flex items-center">
           <Img
-            src="./../../../Public/Logo/Name And Logo.png"
+            src="./../../../Public/Logo/Name And Logo.svg"
             alt="Header Logo"
             className="h-20 w-auto object-contain"
           />
