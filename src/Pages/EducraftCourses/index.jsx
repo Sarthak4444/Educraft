@@ -82,7 +82,7 @@ export default function EducraftCoursesPage() {
           </div>
         </Tabs>
         <div className="container-xs text-center">
-          {" "}
+          
           <HighSchoolCoursesSection />
         </div>
       </div>
