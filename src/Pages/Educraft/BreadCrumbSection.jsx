@@ -12,7 +12,7 @@ export default function BreadCrumbSection() {
                 as="h1"
                 className="mt-1 mb-10 text-xl font-medium text-[#000000]"
               >
-                Home | Shop
+                Home 
               </Heading>
               <Heading
                 as="h2"
@@ -21,7 +21,7 @@ export default function BreadCrumbSection() {
                 <>
                   Educraft 
                   <br />
-                  online
+                  Online
                   <br />
                   Book Shop
                 </>
@@ -29,7 +29,7 @@ export default function BreadCrumbSection() {
             </div>
             <div>
               <Img
-                src="Public/Images/Books.png"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJh9iD97T3fFEjUYq0P4mzd3Hz1I2BQj-unA&s"
                 alt="Brand Logo"
                 className="h-[200px] object-contain mt-6 sm:mt-0 rounded-2xl md:w-full"
               />
