@@ -8,9 +8,9 @@ export default function ApplyAsInstructure() {
       <div className="flex justify-center">
         <div className="container-xs flex items-center justify-between md:gap-32 md:flex-row flex-col px-5">
           <Img
-            src="https://dhws-production.s3.ap-south-1.amazonaws.com/66e9325c132e0c00237c680a/66e932f647ed1f001be8a9f9/66e932f647ed1f001be8aa02/appSource/images/img_image_520x510.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQODH4IWPZWQNPYGZ%2F20240921%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20240921T155633Z&X-Amz-Expires=25200&X-Amz-Signature=f1862445402fec51f417eb547e2ee41ce0d0a043cc5de54078be0c7e353be8a6&X-Amz-SignedHeaders=host"
+            src="https://static.vecteezy.com/system/resources/previews/036/020/315/non_2x/ai-generated-portrait-of-a-three-happy-young-men-showing-thumbs-up-isolated-over-yellow-background-photo.jpg"
             alt="Featured Image"
-            className="ml-5 h-[520px] md:w-[40%] object-contain md:ml-0 w-full"
+            className="ml-5 h-[520px] md:w-[40%] object-cover md:ml-0 w-full rounded-full"
           />
           <div className="flex u-[46%] flex-col items-start gap-[30px] md:w-full">
             <div className="flex flex-col items-start justify-center gap-2.5 self-stretch">
